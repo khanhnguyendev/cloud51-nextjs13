@@ -30,6 +30,15 @@ export const product = {
       validation: (Rule: Rule) => Rule.required().error("Slug is required"),
     },
     {
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      validation: (Rule: Rule) => Rule.required().error("Image is required"),
+    },
+    {
       name: "excerpt",
       title: "Excerpt",
       type: "text",
@@ -59,18 +68,18 @@ export const product = {
       validation: (Rule: Rule) => Rule.required().error("Stock is required"),
     },
     {
-      name: "vendors",
-      title: "Vendors",
+      name: "vendor",
+      title: "Vendor",
       type: "array",
       of: [{ type: "reference", to: [{ type: "vendor" }] }],
-      validation: (Rule: Rule) => Rule.required().error("Tags are required"),
+      validation: (Rule: Rule) => Rule.required().error("Vendor are required"),
     },
     {
-      name: "tags",
-      title: "Tags",
+      name: "tag",
+      title: "Tag",
       type: "array",
       of: [{ type: "reference", to: [{ type: "tag" }] }],
-      validation: (Rule: Rule) => Rule.required().error("Tags are required"),
+      validation: (Rule: Rule) => Rule.required().error("Tag are required"),
     },
   ],
 };

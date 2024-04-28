@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import { Provider } from "../utils/Provider";
 import TopPage from "../components/TopPage";
+import { PhoneIcon } from "../components/Icons";
+import AlwaysOnTop from "../components/AlwaysOnTop";
 
 const inter = Inter({ subsets: ["latin"] });
 const firaCode = Fira_Code({ subsets: ["latin"] });
@@ -27,6 +29,7 @@ export default function RootLayout({
           <Navbar />
           <TopPage />
           <main className="mx-auto max-w-5xl px-6">{children}</main>
+          <AlwaysOnTop />
         </Provider>
       </body>
     </html>

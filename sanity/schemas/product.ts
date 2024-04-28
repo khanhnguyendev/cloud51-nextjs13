@@ -68,6 +68,12 @@ export const product = {
       validation: (Rule: Rule) => Rule.required().error("Stock is required"),
     },
     {
+      name: "status",
+      title: "Status (New, Seal, 99%, 97%, ...)",
+      type: "string",
+      validation: (Rule: Rule) => Rule.required().error("Status is required"),
+    },
+    {
       name: "vendor",
       title: "Vendor",
       type: "array",

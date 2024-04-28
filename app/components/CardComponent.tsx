@@ -23,19 +23,12 @@ const CardComponent = ({ product }: CardComponentProps) => {
         />
       </a>
       <div className="px-5 pb-5">
+        <span className="text-xs font-semibold">{product.status}</span>
         <a href="#">
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {product.title}
           </h5>
         </a>
-        {product?.tags?.map((tag) => (
-          <div
-            key={tag._id}
-            className="flex items-center mt-2.5 mb-5 text-orange-500"
-          >
-            <span className="text-xs font-semibold">{tag.name}</span>
-          </div>
-        ))}
 
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-gray-900 dark:text-white">

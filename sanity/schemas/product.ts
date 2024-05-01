@@ -62,6 +62,16 @@ export const product = {
       validation: (Rule: Rule) => Rule.required().error("Price is required"),
     },
     {
+      name: "discountPrice",
+      title: "Discount Price",
+      type: "number",
+    },
+    {
+      name: "onSale",
+      title: "On Sale",
+      type: "boolean",
+    },
+    {
       name: "stock",
       title: "Stock",
       type: "number",
@@ -75,14 +85,14 @@ export const product = {
     },
     {
       name: "vendor",
-      title: "Vendor",
+      title: "Vendor (Apple, Samsung, ...)",
       type: "array",
       of: [{ type: "reference", to: [{ type: "vendor" }] }],
       validation: (Rule: Rule) => Rule.required().error("Vendor are required"),
     },
     {
       name: "tag",
-      title: "Tag",
+      title: "Tag (Iphone, Samsung, ...)",
       type: "array",
       of: [{ type: "reference", to: [{ type: "tag" }] }],
       validation: (Rule: Rule) => Rule.required().error("Tag are required"),
